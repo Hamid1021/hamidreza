@@ -1,6 +1,8 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
+import Link from "next/link";
+
 
 const Blog = () => {
   return (
@@ -10,11 +12,10 @@ const Blog = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="پست‌های من"
+          paragraph="اینجا جاییه که تجربه‌هام، چالش‌هام و کشف‌های روزانه‌م رو با شما به اشتراک می‌ذارم. از نکات فنی گرفته تا نگاه‌های فلسفی به دنیای کد، هر پست تلاشی‌ست برای ساختن ارتباطی واقعی و الهام‌بخش اوه تا یادم نرفته از خاطراتم هم براتون میگم."
           center
         />
-
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
           {blogData.map((blog) => (
             <div key={blog.id} className="w-full">
@@ -22,6 +23,14 @@ const Blog = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex mt-6 flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+        <Link
+          href="https://github.com/Hamid1021"
+          className="inline-block rounded-md shadow-md drop-shadow-lg bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+        >
+          نمایش بیشتر
+        </Link>
       </div>
     </section>
   );

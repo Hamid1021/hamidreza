@@ -12,8 +12,8 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "حمیدرضا رضایی",
+  description: "سلام به همه! من حمیدرضا رضایی هستم. ✨ برنامه نویس حرفه‌ای پایتون، و عاشق ساختن سایت‌های شگفت‌انگیز. تخصص من در فریم‌ورک‌های Django ،  ASP.NET  و Next.js است. همیشه در حال کاوش در دنیای کد هستم و تلاش می‌کنم بهترین وب‌سایت‌ها را بسازم! ‍به دنیای دیجیتال خوش آمدید! ",
   // other metadata
 };
 
@@ -23,12 +23,12 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
+      {/* <Video /> */}
+      {/* <Brands /> */}
+      {/* <AboutSectionOne />
+      <AboutSectionTwo /> */}
+      {/* <Testimonials /> */}
+      {/* <Pricing /> */}
       <Blog />
       <Contact />
     </>

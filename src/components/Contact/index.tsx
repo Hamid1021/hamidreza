@@ -1,6 +1,23 @@
-import NewsLatterBox from "./NewsLatterBox";
+'use client'
+import Image from "next/image"
 
 const Contact = () => {
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const target = e.target as HTMLFormElement;
+    const full_name = target.full_name.value;
+    const email = target.email.value;
+    const message = target.message.value;
+
+    // await fetch('/api/contact', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ full_name, email, message }),
+    // });
+
+  };
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -12,12 +29,12 @@ const Contact = () => {
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+                اگر سوالی دارید از فرم زیر استفاده نمایید
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
+                پاسخ شما به ایمیل شما ارسال خواهد شد
               </p>
-              <form>
+              <form method="post" onSubmit={(e: any) => handleFormSubmit(e)}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -25,11 +42,13 @@ const Contact = () => {
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Name
+                        نام و نام خانوادگی
                       </label>
                       <input
                         type="text"
-                        placeholder="Enter your name"
+                        id="full_name"
+                        name="full_name"
+                        placeholder="نام و نام خانوادگی خود را وارد کنید ..."
                         className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -40,11 +59,13 @@ const Contact = () => {
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Email
+                        آدرس ایمیل
                       </label>
                       <input
                         type="email"
-                        placeholder="Enter your email"
+                        name="email"
+                        id="email"
+                        placeholder="آدرس ایمیل خود را وارد کنید ..."
                         className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -55,19 +76,20 @@ const Contact = () => {
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Message
+                        متن پیام
                       </label>
                       <textarea
                         name="message"
+                        id="message"
                         rows={5}
-                        placeholder="Enter your Message"
+                        placeholder="متن پیام خود را وارد کنید ..."
                         className="border-stroke dark:text-body-color-dark dark:shadow-two w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="shadow-submit dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
-                      Submit Ticket
+                    <button className="shadow-submit dark:shadow-submit-dark rounded-lg drop-shadow-md bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
+                      ارسال پیام
                     </button>
                   </div>
                 </div>
@@ -75,11 +97,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
+            {/* <NewsLatterBox /> */}
+            <div>
+              <Image alt="حمیدرضا رضایی" src={"/images/me.png"} width={1000} height={1000} />
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

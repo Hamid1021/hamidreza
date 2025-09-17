@@ -15,26 +15,23 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Next.js Template for Startup & SaaS
+                  وبسایت شخصی حمیدرضا رضایی
                 </h1>
                 <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+                  سلام به همه! من <span className="font-bold underline underline-offset-8">حمیدرضا رضایی</span> هستم. 🚀✨
+                  برنامه‌نویسی برای من فقط کدنویسی نیست—یه سفره، یه ماجراجویی تو دنیای بی‌پایان منطق و زیبایی. 🌐💻
+                  تخصصم در فریم‌ورک‌های <span className="font-semibold text-primary">Django</span> 🐍، <span className="font-semibold text-primary">ASP.NET</span> 🚀 و <span className="font-semibold text-primary">Next.js</span> 🌟،
+                  منو مجهز کرده تا تجربه‌های دیجیتال رو با ظرافت و قدرت خلق کنم.
+                  همیشه در حال کاوشم، همیشه در حال ساختن—برای اینکه وب‌سایت فقط یه صفحه نیست، یه احساسه، یه ارتباطه. 💪👨‍💻
+                  خوش اومدید به دنیای من؛ جایی که کدها نفس می‌کشند و تجربه‌ها جان می‌گیرند. 🌍📲
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    target="_blank"
+                    href="https://github.com/Hamid1021"
+                    className="inline-block rounded-md shadow-md drop-shadow-lg bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Star on GitHub
+                    گیت هاب من
                   </Link>
                 </div>
               </div>

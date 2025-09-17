@@ -3,45 +3,45 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "چطور رابط‌های کاربری روان و زنده بسازیم؟",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "در این پست، تجربه‌هام از طراحی UIهایی که نه‌تنها زیبا بلکه حس‌برانگیز هستند رو به اشتراک می‌ذارم. از Tailwind تا React، همه چیز درباره‌ی حرکت و معناست.",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
+      name: "حمیدرضا رضایی",
+      image: "/images/logoMe.png",
+      designation: "Fullstack Developer",
     },
-    tags: ["creative"],
-    publishDate: "2025",
+    tags: ["UI", "React", "Tailwind"],
+    publishDate: "2025-09-01",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "امنیت در معماری Django و Next.js",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "چطور می‌تونیم معماری پروژه‌هامون رو طوری طراحی کنیم که هم مقیاس‌پذیر باشه و هم امن؟ اینجا درباره‌ی تجربه‌هام در طراحی سطوح دسترسی و جلوگیری از آسیب‌پذیری‌ها نوشتم.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      name: "حمیدرضا رضایی",
+      image: "/images/logoMe.png",
+      designation: "Architectural Reviewer",
     },
-    tags: ["computer"],
-    publishDate: "2025",
+    tags: ["Security", "Architecture", "Django", "Next.js"],
+    publishDate: "2025-09-08",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "وقتی کد شاعر می‌شود: نگاهی فلسفی به برنامه‌نویسی",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "آیا کدنویسی فقط منطق و ساختار است؟ یا می‌تونه مثل شعر، حامل احساس و معنا باشه؟ در این پست، از تجربه‌های شخصی‌ام در برخورد با زیبایی در کد نوشتم.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "حمیدرضا رضایی",
+      image: "/images/logoMe.png",
+      designation: "Code Poet",
     },
-    tags: ["design"],
-    publishDate: "2025",
+    tags: ["Philosophy", "Coding", "Creativity"],
+    publishDate: "2025-09-15",
   },
 ];
 export default blogData;
