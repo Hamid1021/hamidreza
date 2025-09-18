@@ -17,7 +17,9 @@ const Video = () => {
           center
           mb="80px"
         />
-
+        {
+          isOpen
+        }
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div

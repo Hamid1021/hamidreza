@@ -15,7 +15,7 @@ export async function middleware(request: NextRequest) {
     // }
 
     // بررسی لاگین بودن کاربر
-    const sessionCookie = request.cookies.get('session')?.value;
+    // const sessionCookie = request.cookies.get('session')?.value;
     // const session = await decrypt(sessionCookie) as SessionPayload;
 
     // const isAuth = !!session?.userId;

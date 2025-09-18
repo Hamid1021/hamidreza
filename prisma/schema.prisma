@@ -1,15 +1,24 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-generator client {
-  provider = "prisma-client-js"
-  output   = "./generated"
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:yWbR3503ph1Lh0Co@services.irn10.chabokan.net:28088/william"
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = "file:./db.sqlite"
+generator client {
+  provider = "prisma-client-js"
 }
+// generator client {
+//   provider = "prisma-client-js"
+// }
+
+// datasource db {
+//   provider = "sqlite"
+//   url      = "file:./db.sqlite"
+// }
 
 model Blog {
   id          Int      @id @default(autoincrement())
@@ -50,77 +59,3 @@ model Feature {
   paragraph String
   iconPath  String
 }
-
-// model User {
-//     id                         Int                      @id @unique @default(autoincrement())
-//     firstName                  String
-//     lastName                   String
-//     phoneNumber                String                   @unique
-//     email                      String?
-//     phone                      String?
-//     address                    String?
-//     password                   String?
-//     bankAccount                String?
-//     bankSheba                  String?
-//     score                      Int                      @default(5) // امتیاز سخنران یا میزبان
-//     isActive                   Boolean                  @default(true)
-//     isBanned                   Boolean                  @default(false)
-//     is_deleted                 Boolean                  @default(false)
-//     createdAt                  DateTime                 @default(now())
-//     updatedAt                  DateTime                 @updatedAt
-//     isAdmin                    Boolean                  @default(false)
-//     isOwner                    Boolean                  @default(false)
-//     isSpeaker                  Boolean                  @default(false)
-//     is_spacial_speaker         Boolean                  @default(false)
-//     can_select_event           Boolean                  @default(false)
-//     education                  String?
-//     groupId                    Int?
-//     imageId                    Int?
-//     custome_user_id            String                   @unique @default(uuid())
-//     authenticate_code_send     String                   @default("0000")
-//     image                      Image?                   @relation(fields: [imageId], references: [id], onDelete: SetNull)
-//     Group                      Group?                   @relation(fields: [groupId], references: [id], onDelete: SetNull)
-//     payments                   Payment[]
-//     surveyResponses            SurveyResponse[]
-//     userImages                 UserImage[]
-//     logs                       ActivityLog[]
-//     familyMembers              FamilyMember[]
-//     specializedCourses         SpecializedCourse[]
-//     EvaluationDocument         EvaluationDocument[]
-//     SpeakerSchedule            SpeakerSchedule[]
-//     Event                      Event[]
-//     EventAssign                EventAssign[]
-//     EvaluationDocumentApproval UserEvaluationDocument[]
-//     UserSpecializedCourse      UserSpecializedCourse[]
-//     user_ticket                UserTicket[]             @relation("sentTickets")
-//     user_ticket_admin          UserTicket[]             @relation("receivedTickets")
-//     conversations              Conversation[]           @relation("ParticipantConversations")
-//     sentMessages               Message[]
-//     readMessages               Message[]                @relation("ReadMessages")
-//     PaymentSpeaker             PaymentSpeaker[]
-//     MessageRecipient           MessageRecipient[]
-
-//     @@index([phoneNumber])
-// }
-
-// model Image {
-//     id        Int         @id @unique @default(autoincrement())
-//     image     String
-//     isActive  Boolean     @default(false)
-//     createdAt DateTime    @default(now())
-//     User      User[]
-//     UserImage UserImage[]
-// }
-
-// model UserImage {
-//     id              Int      @id @unique @default(autoincrement())
-//     userId          Int?
-//     imageId         Int?
-//     isApproved      String?  @default("PendingApproval")
-//     rejectionReason String?
-//     createdAt       DateTime @default(now())
-//     User            User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
-//     Image           Image?   @relation(fields: [imageId], references: [id], onDelete: SetNull)
-
-//     @@unique([userId, imageId])
-// }
