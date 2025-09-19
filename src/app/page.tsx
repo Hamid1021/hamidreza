@@ -13,6 +13,7 @@ import { Metadata } from "next";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Link from "next/link";
 import { getAllProjects } from "./projects/actions";
+import { Project } from "@prisma/client";
 
 export const metadata: Metadata = {
   title: "حمیدرضا رضایی",
@@ -35,7 +36,7 @@ export default async function Home() {
         mb="0"
       />
 
-      {projects.map((project: any, index: number) =>
+      {projects.map((project: Project, index: number) =>
         index % 2 === 0 ? (
           <ProjectSectionLeft
             key={project.url}
