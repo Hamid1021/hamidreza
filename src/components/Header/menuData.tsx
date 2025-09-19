@@ -7,12 +7,12 @@ const menuData: Menu[] = [
     path: "/",
     newTab: false,
   },
-  // {
-  //   id: 2,
-  //   title: "درباره من",
-  //   path: "/about",
-  //   newTab: false,
-  // },
+  {
+    id: 2,
+    title: "پروژه های من",
+    path: "/projects",
+    newTab: false,
+  },
   {
     id: 33,
     title: "پست ها",

@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 
-export const load_first_blogs = async (limit: number, offset: number) => {
+export const load_first_blogs = async (limit: number, offset: number, is_static: boolean = false) => {
     const limitParam = limit || 6
     const offsetParam = offset || 0
 
@@ -11,7 +11,10 @@ export const load_first_blogs = async (limit: number, offset: number) => {
         const data = await prisma.blog.findMany({
             skip: offsetParam,
             take: limitParam,
-            orderBy: { publishDate: 'desc' },
+            orderBy: [
+                is_static ? { priority_show: 'asc' } : {},
+                { publishDate: 'desc' }
+            ],
             select: {
                 id: true,
                 title: true,

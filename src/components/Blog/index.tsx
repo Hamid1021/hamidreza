@@ -5,7 +5,7 @@ import { load_first_blogs } from "@/app/blog/actions";
 
 
 const Blog = async () => {
-  const { data: blogs } = await load_first_blogs(3, 0);
+  const { data: blogs } = await load_first_blogs(3, 0, true);
 
   return (
     <section
@@ -14,7 +14,7 @@ const Blog = async () => {
     >
       <div className="container">
         <SectionTitle
-          title="پست‌های من"
+          title="پست‌های ثابت"
           paragraph="اینجا جاییه که تجربه‌هام، چالش‌هام و کشف‌های روزانه‌م رو با شما به اشتراک می‌ذارم. از نکات فنی گرفته تا نگاه‌های فلسفی به دنیای کد، هر پست تلاشی‌ست برای ساختن ارتباطی واقعی و الهام‌بخش اوه تا یادم نرفته از خاطراتم هم براتون میگم."
           center
         />
@@ -31,7 +31,7 @@ const Blog = async () => {
           href="/blog/"
           className="inline-block rounded-md shadow-md drop-shadow-lg bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
         >
-          نمایش بیشتر
+          همه پست ها
         </Link>
       </div>
     </section>
