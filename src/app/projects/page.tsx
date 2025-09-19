@@ -16,7 +16,7 @@ const ProjectsPage = async () => {
   const projects = await getAllProjects();
   return (
     <>
-      <section className="pt-32">
+      <section className="py-32">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">

@@ -26,8 +26,8 @@ const ProjectSectionRight = ({
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <Image src={imageLight || "/None.jpg"} alt="project image" fill className="dark:hidden" />
-              <Image src={imageDark || "/None.jpg"} alt="project image dark" fill className="hidden dark:block" />
+              <Image src={imageLight || "/None.jpg"} alt="project image" width={1000} height={1000} className="dark:hidden w-full h-[500px]" />
+              <Image src={imageDark || "/None.jpg"} alt="project image dark" width={1000} height={1000} className="hidden dark:block w-full h-[500px]" />
             </div>
           </div>
 
