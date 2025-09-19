@@ -13,7 +13,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         className="wow fadeInUp hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 dark:bg-dark h-full"
         data-wow-delay=".1s"
       >
-        <Link
+        {/* <Link
           href="/blog-details"
           className="relative block aspect-[37/22] w-full"
         >
@@ -24,16 +24,32 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             </span>
           }
           <Image src={image} alt="image" fill />
-        </Link>
+        </Link> */}
+        <div
+          className="relative block aspect-[37/22] w-full"
+        >
+          {
+            tags.length > 0 &&
+            <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
+              {tags[0].name}
+            </span>
+          }
+          <Image src={image} alt="image" fill />
+        </div>
         <div className="flex flex-col p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
           <div className="h-[80px]">
             <h3>
-              <Link
+              {/* <Link
                 href="/blog-details"
                 className="mb-4 line-clamp-2 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
               >
                 {title}
-              </Link>
+              </Link> */}
+              <div
+                className="mb-4 line-clamp-2 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
+              >
+                {title}
+              </div>
             </h3>
           </div>
           <p className="mb-6 h-[100px] line-clamp-4 text-base font-medium text-body-color dark:text-white">
