@@ -5,7 +5,7 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:yWbR3503ph1Lh0Co@services.irn10.chabokan.net:28088/william"
+  url      = "postgresql://postgres:vhxy9efSqMrk@services.irn13.chabokan.net:47123/william"
 }
 
 generator client {
