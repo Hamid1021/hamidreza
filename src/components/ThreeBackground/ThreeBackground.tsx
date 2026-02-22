@@ -18,6 +18,8 @@ const ThreeParticlesFleeMouse = () => {
     useEffect(() => {
         if (!mountRef.current) return
 
+        const container = mountRef.current
+
         const scene = new THREE.Scene()
         scene.fog = new THREE.FogExp2(darkMode ? 0x0b0d14 : 0xf7f7f7, 0.001)
 

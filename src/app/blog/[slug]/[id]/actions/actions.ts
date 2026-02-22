@@ -22,10 +22,10 @@ export async function getBlogByIdAndSlug(id: number, slug?: string): Promise<Blo
         // تبدیل null به undefined برای فیلدهای optional
         return {
             ...blog,
-            meta_description: blog.meta_description ?? undefined,
-            meta_keyword: blog.meta_keyword ?? undefined,
+            meta_description: blog.meta_description ?? null,
+            meta_keyword: blog.meta_keyword ?? null,
             slug: blog.slug ?? null,
-            priority_show: blog.priority_show ?? undefined,
+            priority_show: blog.priority_show ?? null,
         };
     } catch (error) {
         console.error("Error fetching blog:", error);

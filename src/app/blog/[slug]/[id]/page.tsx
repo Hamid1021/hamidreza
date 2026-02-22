@@ -1,6 +1,6 @@
 import Image from "next/image";
 import moment from "moment-jalaali";
-import SharePost from "@/components/Blog/SharePost";
+// import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import { getBlogByIdAndSlug } from "./actions/actions";
 import { Blog } from "@/types/blog";
@@ -8,12 +8,12 @@ import { Metadata, ResolvingMetadata } from "next";
 
 type Props = {
   params: Promise<{ slug: string, id: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  // searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export const revalidate = 60
 
-export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blog: Blog | null = await getBlogByIdAndSlug(Number((await params).id), (await params).slug);
 
   if (!blog) {
