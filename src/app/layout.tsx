@@ -19,7 +19,10 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black`}>
+      <body className="relative bg-[#FCFCFC] dark:bg-black overflow-x-hidden dark:text-blue-100">
+
+        <ThreeBackground />
+
         <Providers>
           <Header />
           {children}
@@ -31,4 +34,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers"; import ThreeBackground from "@/components/ThreeBackground/ThreeBackground";
+

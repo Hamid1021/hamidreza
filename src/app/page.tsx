@@ -76,7 +76,7 @@ export default async function Home() {
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <Blog />
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }

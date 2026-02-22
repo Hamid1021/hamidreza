@@ -1,4 +1,21 @@
+"use client";
+
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const item: Variants = {
+  hidden: { opacity: 0, x: 20 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
 
 const ProjectSectionRight = ({
   title,
@@ -19,24 +36,43 @@ const ProjectSectionRight = ({
 }) => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 lg:w-1/2">
-            <div
-              className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
-              data-wow-delay=".15s"
+      <div className="container mx-auto px-4">
+        <motion.div
+          className="-mx-4 flex flex-wrap items-center"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          {/* تصویر سمت چپ */}
+          <motion.div variants={item} className="w-full px-4 lg:w-1/2 flex justify-center mb-10 lg:mb-0">
+            <motion.div
+              className="rounded-2xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <Image src={imageLight || "/None.jpg"} alt="project image" width={4000} height={4000} className="dark:hidden w-auto h-[500px]" />
-              <Image src={imageDark || "/None.jpg"} alt="project image dark" width={4000} height={4000} className="hidden dark:block w-auto h-[500px]" />
-            </div>
-          </div>
+              <Image
+                src={imageLight || "/None.jpg"}
+                alt="project image"
+                width={4000}
+                height={4000}
+                className="dark:hidden w-full h-[500px] object-cover rounded-2xl"
+              />
+              <Image
+                src={imageDark || "/None.jpg"}
+                alt="project image dark"
+                width={4000}
+                height={4000}
+                className="hidden dark:block w-full h-[500px] object-cover rounded-2xl"
+              />
+            </motion.div>
+          </motion.div>
 
-          <div className="w-full px-4 lg:w-1/2">
-            <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
-              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl">
-                {title}
-              </h3>
-              <p className="mb-6 text-base text-body-color">{description}</p>
+          {/* متن سمت راست */}
+          <motion.div variants={item} className="w-full px-4 lg:w-1/2">
+            <motion.div
+              className="p-6 rounded-2xl bg-white dark:bg-gray-900 shadow-md border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              whileHover={{ scale: 1.02 }}
+            >
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl">{title}</h3>
+              <p className="mb-6 text-base text-gray-700 dark:text-blue-100">{description}</p>
 
               <div className="mb-4">
                 <h4 className="font-semibold text-black dark:text-white">نام سایت:</h4>
@@ -44,23 +80,29 @@ const ProjectSectionRight = ({
               </div>
 
               <div className="mb-4">
-                <h4 className="font-semibold text-black dark:text-white">تکنولوژی‌های استفاده شده:</h4>
+                <h4 className="font-semibold text-black dark:text-white">تکنولوژی‌ها:</h4>
                 <ul className="list-disc list-inside">
-                  {technologies.map((tech, index) => (
-                    <li key={index}>{tech}</li>
+                  {technologies.map((tech, idx) => (
+                    <li key={idx}>{tech}</li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-semibold text-black dark:text-white">لینک مستقیم:</h4>
-                <a dir="ltr" href={downloadUrl} className="text-blue-600 underline" target="_blank">
+                <h4 className="font-semibold text-black dark:text-white">لینک:</h4>
+                <a
+                  dir="ltr"
+                  href={downloadUrl}
+                  className="text-blue-600 underline hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {downloadUrl}
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

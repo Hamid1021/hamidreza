@@ -4,99 +4,112 @@ import Image from "next/image"
 import { submitContact } from "./actions"
 import { useActionState } from "react"
 
-
 const Contact = () => {
   const initialState = {
     status: false,
     message: '',
   }
+
   const [state, formAction, pending] = useActionState(submitContact, initialState)
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div className="wow fadeInUp shadow-three dark:bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]" data-wow-delay=".15s">
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                اگر سوالی دارید از فرم زیر استفاده نمایید
+    <section className="relative overflow-hidden py-20">
+
+      {/* Background Glow */}
+      <div className="absolute -top-40 -left-40 h-96 w-96 bg-purple-500/20 blur-3xl rounded-full" />
+      <div className="absolute -bottom-40 -right-40 h-96 w-96 bg-blue-500/20 blur-3xl rounded-full" />
+
+      <div className="container relative z-10">
+        <div className="flex flex-wrap items-center">
+
+          {/* Form */}
+          <div className="w-full lg:w-7/12 px-4">
+            <div className="rounded-2xl border border-white/20 bg-white/70 dark:bg-white/5 backdrop-blur-xl shadow-xl p-8 md:p-12">
+
+              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+                بیاید صحبت کنیم
               </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
-                پاسخ شما به ایمیل شما ارسال خواهد شد
+
+              <p className="mb-10 text-body-color  dark:text-blue-100 dark:text-white/70">
+                سوال یا ایده‌ای داری؟ پیام بده، جوابش مستقیم به ایمیلت میاد ✉️
               </p>
 
-              <form action={formAction}>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label htmlFor="full_name" className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        نام و نام خانوادگی
-                      </label>
-                      <input
-                        type="text"
-                        id="full_name"
-                        name="full_name"
-                        placeholder="نام و نام خانوادگی خود را وارد کنید ..."
-                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label htmlFor="email" className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        آدرس ایمیل
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="آدرس ایمیل خود را وارد کنید ..."
-                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label htmlFor="message" className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        متن پیام
-                      </label>
-                      <textarea
-                        name="message"
-                        id="message"
-                        rows={5}
-                        placeholder="متن پیام خود را وارد کنید ..."
-                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button
-                      type="submit"
-                      disabled={pending}
-                      className="shadow-submit dark:shadow-submit-dark rounded-lg drop-shadow-md bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90"
-                    >
-                      {pending ? 'در حال ارسال...' : 'ارسال پیام'}
-                    </button>
-                  </div>
+              <form action={formAction} className="space-y-8">
+
+                {/* Name */}
+                <div>
+                  <label className="block mb-2 text-sm font-medium">
+                    نام و نام خانوادگی
+                  </label>
+                  <input
+                    type="text"
+                    name="full_name"
+                    placeholder="مثلاً حمیدرضا رضایی"
+                    className="w-full rounded-xl border border-gray-300/50 dark:border-white/10 bg-white/80 dark:bg-white/5 px-5 py-3 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+                  />
                 </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block mb-2 text-sm font-medium">
+                    آدرس ایمیل
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    className="w-full rounded-xl border border-gray-300/50 dark:border-white/10 bg-white/80 dark:bg-white/5 px-5 py-3 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+                  />
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label className="block mb-2 text-sm font-medium">
+                    پیام شما
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={5}
+                    placeholder="هر چی تو ذهنته بنویس..."
+                    className="w-full resize-none rounded-xl border border-gray-300/50 dark:border-white/10 bg-white/80 dark:bg-white/5 px-5 py-3 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+                  />
+                </div>
+
+                {/* Button */}
+                <button
+                  type="submit"
+                  disabled={pending}
+                  className="w-full rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 py-4 text-white font-medium shadow-lg hover:scale-[1.02] hover:shadow-xl transition-all duration-300 disabled:opacity-70"
+                >
+                  {pending ? "در حال ارسال..." : "ارسال پیام 🚀"}
+                </button>
+
               </form>
 
+              {/* Message */}
               {state.message && (
-                <p
-                  className={`mt-6 text-center text-sm font-medium ${state.status ? 'text-green-600' : 'text-red-500'
-                    }`}
-                >
+                <div className={`mt-6 text-center text-sm font-medium ${state.status ? "text-green-600" : "text-red-500"
+                  }`}>
                   {state.message}
-                </p>
+                </div>
               )}
+            </div>
+          </div>
 
+          {/* Image */}
+          <div className="hidden lg:flex w-5/12 px-4 justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 blur-2xl rounded-full" />
+              <Image
+                src="/images/me.png"
+                alt="حمیدرضا رضایی"
+                width={450}
+                height={450}
+                className="relative z-10 rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
+              />
             </div>
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <div>
-              <Image alt="حمیدرضا رضایی" src={"/images/me.png"} width={1000} height={1000} />
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

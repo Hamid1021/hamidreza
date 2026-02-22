@@ -25,7 +25,7 @@ const BlogPaginator = ({
                                 href={`?page=${Math.max(currentPage - 1, 1)}`}
                                 className={`flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition ${currentPage === 1
                                     ? "cursor-not-allowed bg-gray-300 text-gray-500"
-                                    : "bg-body-color bg-opacity-[15%] text-body-color hover:bg-primary hover:bg-opacity-100 hover:text-white"
+                                    : "bg-body-color bg-opacity-[15%] text-body-color  dark:text-blue-100 hover:bg-primary hover:bg-opacity-100 hover:text-white"
                                     }`}
                             >
                                 صفحه قبل
@@ -44,7 +44,7 @@ const BlogPaginator = ({
                                 href={`?page=${page}`}
                                 className={`flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition ${page === currentPage
                                     ? "bg-primary text-white"
-                                    : "bg-body-color bg-opacity-[15%] text-body-color hover:bg-primary hover:bg-opacity-100 hover:text-white"
+                                    : "bg-body-color bg-opacity-[15%] text-body-color  dark:text-blue-100 hover:bg-primary hover:bg-opacity-100 hover:text-white"
                                     }`}
                             >
                                 {page}
@@ -57,7 +57,7 @@ const BlogPaginator = ({
                         {hasMore ? (
                             <Link
                                 href={`?page=${currentPage + 1}`}
-                                className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
+                                className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color  dark:text-blue-100 transition hover:bg-primary hover:bg-opacity-100 hover:text-white"
                             >
                                 صفحه بعد
                             </Link>

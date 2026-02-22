@@ -24,7 +24,7 @@ const Blog = async ({ searchParams }: { searchParams: Promise<{ page: string }> 
         description="اینجا جاییه که تجربه‌هام، چالش‌هام و کشف‌های روزانه‌م رو با شما به اشتراک می‌ذارم. از نکات فنی گرفته تا نگاه‌های فلسفی به دنیای کد، هر پست تلاشی‌ست برای ساختن ارتباطی واقعی و الهام‌بخش اوه تا یادم نرفته از خاطراتم هم براتون میگم."
       />
 
-      <section className="pb-[120px]">
+      <section className="pb-[120px] dark:text-blue-100">
         <div className="container">
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
             {data.map((blog) => (

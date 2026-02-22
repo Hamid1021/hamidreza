@@ -6,16 +6,16 @@ import Link from "next/link";
 
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+  const { id, title, image, paragraph, author, tags, publishDate, slug, meta_description } = blog;
 
   return (
     <>
       <div
-        className="wow fadeInUp hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 dark:bg-dark h-full"
+        className="wow fadeInUp hover:shadow-two dark:text-blue-100 dark:hover:shadow-gray-dark group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 dark:bg-dark h-full"
         data-wow-delay=".1s"
       >
         <Link
-          href={`/blog-details/${blog.id}`}
+          href={`/blog/${slug}/${id}`}
           className="relative block aspect-[37/22] w-full"
         >
           {
@@ -41,7 +41,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           <div className="h-[80px]">
             <h3>
               <Link
-                href={`/blog-details/${blog.id}`}
+                href={`/blog/${slug}/${id}`}
                 className="mb-4 line-clamp-2 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
               >
                 {title}
@@ -53,9 +53,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               </div> */}
             </h3>
           </div>
-          <p className="mb-6 h-[100px] line-clamp-4 text-base font-medium text-body-color dark:text-white" dangerouslySetInnerHTML={{ __html: paragraph }}>
-          </p>
-          <div className="flex items-center justify-between h-[60px] pt-4 border-t border-body-color border-opacity-10 dark:border-white dark:border-opacity-10">
+
+          <div
+            className="mb-6 h-[100px] line-clamp-4 text-base font-medium text-body-color dark:text-blue-100"
+            dangerouslySetInnerHTML={{ __html: meta_description ?? "" }}
+          />
+
+          <div className="flex items-center justify-between h-[60px] pt-4 border-t border-body-color dark:text-blue-100 border-opacity-10 dark:border-white dark:border-opacity-10">
+
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 overflow-hidden rounded-full">
                 <Image src={author.image} alt="author" fill />
@@ -64,14 +69,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
                 <h4 className="text-sm font-medium text-dark dark:text-white">
                   {author.name}
                 </h4>
-                <p className="text-xs text-body-color">{author.designation}</p>
+                <p className="text-xs text-body-color  dark:text-blue-100">{author.designation}</p>
               </div>
             </div>
             <div>
               <h4 className="text-sm font-medium text-dark dark:text-white text-center">
                 آخرین بروز رسانی
               </h4>
-              <p className="text-xs text-body-color">{moment(publishDate).format('HH:m:ss jYYYY/jMM/jDD')}</p>
+              <p className="text-xs text-body-color  dark:text-blue-100">{moment(publishDate).format('HH:m:ss jYYYY/jMM/jDD')}</p>
             </div>
           </div>
         </div>

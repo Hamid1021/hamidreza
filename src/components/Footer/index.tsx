@@ -3,271 +3,84 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <>
-      <footer
-        className="wow fadeInUp dark:bg-gray-dark relative z-10 bg-white pt-16 md:pt-20 lg:pt-24"
-        data-wow-delay=".1s"
-      >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-            </div>
+    <footer className="relative mt-24 bg-gradient-to-b from-transparent to-gray-50 dark:to-black border-t border-gray-200/50 dark:border-white/10">
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  دسترسی سریع
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                      href={"/contact"}>
-                      پست ها
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                      href={"/contact"}>
-                      درباره من
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                      href={"/contact"}>
-                      تماس با من
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <div className="container py-16">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
-                  {/* <Image
-                    src="/images/logo/logo-2.svg"
-                    alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
-                  />
-                  <Image
-                    src="/images/logo/logo.svg"
-                    alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
-                  /> */}
-                </Link>
-                <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                  سلام! من حمیدرضا رضایی‌ام 🚀 برنامه‌نویسی برای من فقط کدنویسی نیست—یه سفره تو دنیای منطق و زیبایی. تخصصم در Django 🐍، ASP.NET 🚀 و Next.js 🌟 هست. وب‌سایت برای من یه احساسه، یه ارتباطه. خوش اومدید به دنیایی که کدها نفس می‌کشن و تجربه‌ها جان می‌گیرن 🌍💻
-                </p>
-              </div>
-            </div>
-          </div>
+          {/* About */}
+          <div>
+            <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+              حمیدرضا رضایی
+            </h3>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              توسعه یافته توسط حمیدرضا رضایی
+            <p className="text-body-color  dark:text-blue-100 dark:text-white/70 leading-relaxed">
+              برنامه‌نویسی برای من فقط کدنویسی نیست؛
+              ترکیبی از منطق، طراحی و تجربه کاربریه.
+              با Django، ASP.NET و Next.js وب‌سایت‌هایی می‌سازم
+              که هم سریع باشن هم حس خوب منتقل کنن.
             </p>
           </div>
-        </div>
-        <div className="absolute right-0 top-14 z-[-1]">
-          <svg
-            width="55"
-            height="99"
-            viewBox="0 0 55 99"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
-            <mask
-              id="mask0_94:899"
-              style={{ maskType: "alpha" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="99"
-              height="99"
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-black dark:text-white">
+              دسترسی سریع
+            </h4>
+
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-body-color  dark:text-blue-100 dark:text-white/70 hover:text-primary transition-all duration-300 hover:pr-2"
+                >
+                  پست‌ها
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="text-body-color  dark:text-blue-100 dark:text-white/70 hover:text-primary transition-all duration-300 hover:pr-2"
+                >
+                  درباره من
+                </Link>
+              </li>
+              <li>
+              </li>
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <h4 className="text-lg font-semibold mb-6 text-black dark:text-white">
+                بیا همکاری کنیم 🚀
+              </h4>
+              <p className="text-body-color  dark:text-blue-100 dark:text-white/70 mb-6">
+                اگر ایده‌ای داری یا پروژه‌ای تو ذهنته،
+                خوشحال میشم درباره‌ش صحبت کنیم.
+              </p>
+            </div>
+
+            <Link
+              href="/contact"
+              className="inline-block w-fit rounded-xl bg-primary px-6 py-3 text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="#4A6CF7"
-              />
-            </mask>
-            <g mask="url(#mask0_94:899)">
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="url(#paint0_radial_94:899)"
-              />
-              <g opacity="0.8" filter="url(#filter0_f_94:899)">
-                <circle cx="53.8676" cy="26.2061" r="20.3824" fill="white" />
-              </g>
-            </g>
-            <defs>
-              <filter
-                id="filter0_f_94:899"
-                x="12.4852"
-                y="-15.1763"
-                width="82.7646"
-                height="82.7646"
-                filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
-              >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                />
-                <feGaussianBlur
-                  stdDeviation="10.5"
-                  result="effect1_foregroundBlur_94:899"
-                />
-              </filter>
-              <radialGradient
-                id="paint0_radial_94:899"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
-              >
-                <stop stopOpacity="0.47" />
-                <stop offset="1" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-          </svg>
+              شروع گفتگو
+            </Link>
+          </div>
         </div>
-        <div className="absolute bottom-24 left-0 z-[-1]">
-          <svg
-            width="79"
-            height="94"
-            viewBox="0 0 79 94"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              opacity="0.3"
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              fill="url(#paint0_linear_94:889)"
-            />
-            <rect
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              stroke="url(#paint1_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L77.1885 68.2073L50.5215 7.42229Z"
-              fill="url(#paint2_linear_94:889)"
-            />
-            <path
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L76.7963 68.2073L50.5215 7.42229Z"
-              stroke="url(#paint3_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M17.9721 93.3057L-14.9695 88.2076L46.2077 62.325L77.1885 68.2074L17.9721 93.3057Z"
-              fill="url(#paint4_linear_94:889)"
-            />
-            <path
-              d="M17.972 93.3057L-14.1852 88.2076L46.2077 62.325L77.1884 68.2074L17.972 93.3057Z"
-              stroke="url(#paint5_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_94:889"
-                x1="-41"
-                y1="21.8445"
-                x2="36.9671"
-                y2="59.8878"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_94:889"
-                x1="25.6675"
-                y1="95.9631"
-                x2="-42.9608"
-                y2="20.668"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_94:889"
-                x1="20.325"
-                y1="-3.98039"
-                x2="90.6248"
-                y2="25.1062"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_94:889"
-                x1="18.3642"
-                y1="-1.59742"
-                x2="113.9"
-                y2="80.6826"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_94:889"
-                x1="61.1098"
-                y1="62.3249"
-                x2="-8.82468"
-                y2="58.2156"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_94:889"
-                x1="65.4236"
-                y1="65.0701"
-                x2="24.0178"
-                y2="41.6598"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-            </defs>
-          </svg>
+
+        {/* Divider */}
+        <div className="my-12 h-px w-full bg-gradient-to-r from-transparent via-gray-300 dark:via-white/20 to-transparent" />
+
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-body-color  dark:text-blue-100 dark:text-white/60">
+          <p>© {new Date().getFullYear()} تمامی حقوق محفوظ است.</p>
+          <p>توسعه داده شده با ❤️ توسط حمیدرضا رضایی</p>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 

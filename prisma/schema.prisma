@@ -16,6 +16,7 @@ model Blog {
   authorId         Int
   priority_show    Int      @default(10000000)
   meta_description String?
+  meta_keyword     String?
   slug             String?
   author           Author   @relation(fields: [authorId], references: [id])
   tags             Tag[]    @relation("BlogTags")

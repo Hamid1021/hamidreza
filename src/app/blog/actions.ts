@@ -11,15 +11,17 @@ export const load_first_blogs = async (limit: number, offset: number, is_static:
         const data = await prisma.blog.findMany({
             skip: offsetParam,
             take: limitParam,
-            orderBy: [
-                is_static ? { priority_show: 'asc' } : {},
-                { publishDate: 'desc' }
-            ],
+            orderBy: is_static
+                ? [{ priority_show: 'asc' }, { publishDate: 'desc' }]
+                : [{ publishDate: 'asc' }],
             select: {
                 id: true,
+                slug: true,
                 title: true,
                 image: true,
                 paragraph: true,
+                meta_description: true,
+                meta_keyword: true,
                 tags: {
                     select: {
                         id: true,

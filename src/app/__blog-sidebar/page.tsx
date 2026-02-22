@@ -37,13 +37,13 @@ const BlogSidebarPage = () => {
                         </div>
                       </div>
                       <div className="w-full">
-                        <span className="mb-1 text-base font-medium text-body-color">
+                        <span className="mb-1 text-base font-medium text-body-color  dark:text-blue-100">
                           By <span> Musharof Chy</span>
                         </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                      <p className="mr-5 flex items-center text-base font-medium text-body-color  dark:text-blue-100">
                         <span className="mr-3">
                           <svg
                             width="15"
@@ -64,7 +64,7 @@ const BlogSidebarPage = () => {
                         </span>
                         12 Jan 2024
                       </p>
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                      <p className="mr-5 flex items-center text-base font-medium text-body-color  dark:text-blue-100">
                         <span className="mr-3">
                           <svg
                             width="18"
@@ -79,7 +79,7 @@ const BlogSidebarPage = () => {
                         </span>
                         50
                       </p>
-                      <p className="flex items-center text-base font-medium text-body-color">
+                      <p className="flex items-center text-base font-medium text-body-color  dark:text-blue-100">
                         <span className="mr-3">
                           <svg
                             width="20"
@@ -105,7 +105,7 @@ const BlogSidebarPage = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color  dark:text-blue-100 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat.
@@ -120,7 +120,7 @@ const BlogSidebarPage = () => {
                       />
                     </div>
                   </div>
-                  <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-8 text-base font-medium leading-relaxed text-body-color  dark:text-blue-100 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Quis enim lobortis scelerisque fermentum. Neque
@@ -133,7 +133,7 @@ const BlogSidebarPage = () => {
                     pellentesque nec nam aliquam sem et tortor consequat.
                     Pellentesque adipiscing commodo elit at imperdiet.
                   </p>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color  dark:text-blue-100 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Semper auctor neque vitae tempus quam pellentesque nec.
                     <span className="text-primary underline dark:text-white">
                       {" "}
@@ -146,27 +146,27 @@ const BlogSidebarPage = () => {
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Digital marketplace for Ui/Ux designers.
                   </h3>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color  dark:text-blue-100 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
                   </p>
-                  <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                  <ul className="mb-10 list-inside list-disc text-body-color  dark:text-blue-100">
+                    <li className="mb-2 text-base font-medium text-body-color  dark:text-blue-100 sm:text-lg lg:text-base xl:text-lg">
                       Consectetur adipiscing elit in voluptate velit.
                     </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="mb-2 text-base font-medium text-body-color  dark:text-blue-100 sm:text-lg lg:text-base xl:text-lg">
                       Mattis vulputate cupidatat.
                     </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="mb-2 text-base font-medium text-body-color  dark:text-blue-100 sm:text-lg lg:text-base xl:text-lg">
                       Vulputate enim nulla aliquet porttitor odio pellentesque
                     </li>
-                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <li className="mb-2 text-base font-medium text-body-color  dark:text-blue-100 sm:text-lg lg:text-base xl:text-lg">
                       Ligula ullamcorper malesuada proin
                     </li>
                   </ul>
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-center text-base font-medium italic text-body-color">
+                    <p className="text-center text-base font-medium italic text-body-color  dark:text-blue-100">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod incididunt utionals labore et dolore magna
                       aliqua. Quis lobortis scelerisque fermentum, The Neque ut
@@ -313,14 +313,14 @@ const BlogSidebarPage = () => {
                       </svg>
                     </span>
                   </div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color  dark:text-blue-100 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
                   </p>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
-                      <h4 className="mb-3 text-sm font-medium text-body-color">
+                      <h4 className="mb-3 text-sm font-medium text-body-color  dark:text-blue-100">
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
@@ -330,7 +330,7 @@ const BlogSidebarPage = () => {
                       </div>
                     </div>
                     <div className="mb-5">
-                      <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
+                      <h5 className="mb-3 text-sm font-medium text-body-color  dark:text-blue-100 sm:text-right">
                         Share this post :
                       </h5>
                       <div className="flex items-center sm:justify-end">
@@ -347,7 +347,7 @@ const BlogSidebarPage = () => {
                   <input
                     type="text"
                     placeholder="Search here..."
-                    className="border-stroke dark:text-body-color-dark dark:shadow-two mr-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                    className="border-stroke dark:text-body-color  dark:text-blue-100-dark dark:shadow-two mr-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color  dark:text-blue-100 outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                   />
                   <button
                     aria-label="search button"
@@ -407,7 +407,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-3 inline-block text-base font-medium text-body-color  dark:text-blue-100 hover:text-primary"
                     >
                       Tailwind Templates
                     </a>
@@ -415,7 +415,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-3 inline-block text-base font-medium text-body-color  dark:text-blue-100 hover:text-primary"
                     >
                       Landing page
                     </a>
@@ -423,7 +423,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-3 inline-block text-base font-medium text-body-color  dark:text-blue-100 hover:text-primary"
                     >
                       Startup
                     </a>
@@ -431,7 +431,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-3 inline-block text-base font-medium text-body-color  dark:text-blue-100 hover:text-primary"
                     >
                       Business
                     </a>
@@ -439,7 +439,7 @@ const BlogSidebarPage = () => {
                   <li>
                     <a
                       href="#0"
-                      className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-3 inline-block text-base font-medium text-body-color  dark:text-blue-100 hover:text-primary"
                     >
                       Multipurpose
                     </a>

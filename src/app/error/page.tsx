@@ -144,7 +144,7 @@ const ErrorPage = () => {
                 <h3 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
                   متاسفیم صفحه مورد جستجوی شما یافت نشد
                 </h3>
-                <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="mb-10 text-base font-medium leading-relaxed text-body-color  dark:text-blue-100 sm:text-lg sm:leading-relaxed">
                   این صفحه ممکن است حذف یا جا به جا شده باشد
                 </p>
                 <Link
