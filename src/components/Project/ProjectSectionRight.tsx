@@ -26,8 +26,8 @@ const ProjectSectionRight = ({
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <Image src={imageLight || "/None.jpg"} alt="project image" width={1000} height={1000} className="dark:hidden w-full h-[500px]" />
-              <Image src={imageDark || "/None.jpg"} alt="project image dark" width={1000} height={1000} className="hidden dark:block w-full h-[500px]" />
+              <Image src={imageLight || "/None.jpg"} alt="project image" width={4000} height={4000} className="dark:hidden w-auto h-[500px]" />
+              <Image src={imageDark || "/None.jpg"} alt="project image dark" width={4000} height={4000} className="hidden dark:block w-auto h-[500px]" />
             </div>
           </div>
 
@@ -39,12 +39,12 @@ const ProjectSectionRight = ({
               <p className="mb-6 text-base text-body-color">{description}</p>
 
               <div className="mb-4">
-                <h4 className="font-semibold text-black dark:text-white">Site Name:</h4>
+                <h4 className="font-semibold text-black dark:text-white">نام سایت:</h4>
                 <p>{siteName}</p>
               </div>
 
               <div className="mb-4">
-                <h4 className="font-semibold text-black dark:text-white">Technologies Used:</h4>
+                <h4 className="font-semibold text-black dark:text-white">تکنولوژی‌های استفاده شده:</h4>
                 <ul className="list-disc list-inside">
                   {technologies.map((tech, index) => (
                     <li key={index}>{tech}</li>
@@ -53,7 +53,7 @@ const ProjectSectionRight = ({
               </div>
 
               <div>
-                <h4 className="font-semibold text-black dark:text-white">Download / Access:</h4>
+                <h4 className="font-semibold text-black dark:text-white">لینک مستقیم:</h4>
                 <a dir="ltr" href={downloadUrl} className="text-blue-600 underline" target="_blank">
                   {downloadUrl}
                 </a>

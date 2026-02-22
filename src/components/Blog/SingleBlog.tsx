@@ -2,6 +2,7 @@ import { Blog } from "@/types/blog";
 import Image from "next/image";
 // import Link from "next/link";
 import moment from 'moment-jalaali'
+import Link from "next/link";
 
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
@@ -13,8 +14,8 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         className="wow fadeInUp hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 dark:bg-dark h-full"
         data-wow-delay=".1s"
       >
-        {/* <Link
-          href="/blog-details"
+        <Link
+          href={`/blog-details/${blog.id}`}
           className="relative block aspect-[37/22] w-full"
         >
           {
@@ -24,8 +25,8 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             </span>
           }
           <Image src={image} alt="image" fill />
-        </Link> */}
-        <div
+        </Link>
+        {/* <div
           className="relative block aspect-[37/22] w-full"
         >
           {
@@ -35,25 +36,24 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             </span>
           }
           <Image src={image} alt="image" fill />
-        </div>
+        </div> */}
         <div className="flex flex-col p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
           <div className="h-[80px]">
             <h3>
-              {/* <Link
-                href="/blog-details"
+              <Link
+                href={`/blog-details/${blog.id}`}
                 className="mb-4 line-clamp-2 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
               >
                 {title}
-              </Link> */}
-              <div
+              </Link>
+              {/* <div
                 className="mb-4 line-clamp-2 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
               >
                 {title}
-              </div>
+              </div> */}
             </h3>
           </div>
-          <p className="mb-6 h-[100px] line-clamp-4 text-base font-medium text-body-color dark:text-white">
-            {paragraph}
+          <p className="mb-6 h-[100px] line-clamp-4 text-base font-medium text-body-color dark:text-white" dangerouslySetInnerHTML={{ __html: paragraph }}>
           </p>
           <div className="flex items-center justify-between h-[60px] pt-4 border-t border-body-color border-opacity-10 dark:border-white dark:border-opacity-10">
             <div className="flex items-center gap-3">
@@ -69,7 +69,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             </div>
             <div>
               <h4 className="text-sm font-medium text-dark dark:text-white text-center">
-                زمان ارسال
+                آخرین بروز رسانی
               </h4>
               <p className="text-xs text-body-color">{moment(publishDate).format('HH:m:ss jYYYY/jMM/jDD')}</p>
             </div>

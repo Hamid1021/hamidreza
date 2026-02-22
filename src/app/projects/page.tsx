@@ -6,6 +6,8 @@ import SectionTitle from "@/components/Common/SectionTitle";
 import { getAllProjects } from "./actions";
 import { Project } from "@prisma/client";
 
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: "حمیدرضا رضایی" + " | " + "پروژه ها",
   description:
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 
 const ProjectsPage = async () => {
   const projects = await getAllProjects();
+
   return (
     <>
       <section className="py-32">

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "سلام به همه! من حمیدرضا رضایی هستم. ✨ برنامه نویس حرفه‌ای پایتون، و عاشق ساختن سایت‌های شگفت‌انگیز. تخصص من در فریم‌ورک‌های Django ،  ASP.NET  و Next.js است. همیشه در حال کاوش در دنیای کد هستم و تلاش می‌کنم بهترین وب‌سایت‌ها را بسازم! ‍به دنیای دیجیتال خوش آمدید! ",
 };
 
+export const revalidate = 60
+
 const Blog = async ({ searchParams }: { searchParams: Promise<{ page: string }> }) => {
   const page = parseInt((await searchParams).page || "1");
   const limit = 6;

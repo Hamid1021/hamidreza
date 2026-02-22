@@ -13,5 +13,7 @@ export async function getAllProjects(count: number = 0) {
     } catch (error) {
         console.error("خطا در دریافت پروژه‌ها:", error);
         return [];
+    } finally {
+        await prisma.$disconnect();
     }
 }

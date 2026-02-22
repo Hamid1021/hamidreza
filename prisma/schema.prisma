@@ -1,38 +1,24 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-datasource db {
-  provider = "postgresql"
-  url      = "postgresql://postgres:yWbR3503ph1Lh0Co@services.irn10.chabokan.net:28088/william"
-}
-
 generator client {
   provider = "prisma-client-js"
 }
 
-// generator client {
-//   provider = "prisma-client-js"
-// }
-
-// datasource db {
-//   provider = "sqlite"
-//   url      = "file:./db.sqlite"
-// }
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:yWbR3503ph1Lh0Co@services.irn13.chabokan.net:47123/william"
+}
 
 model Blog {
   id               Int      @id @default(autoincrement())
   title            String
-  slug             String?
-  meta_description String?
   paragraph        String
   image            String
   publishDate      DateTime
-  author           Author   @relation(fields: [authorId], references: [id])
   authorId         Int
-  tags             Tag[]    @relation("BlogTags")
   priority_show    Int      @default(10000000)
+  meta_description String?
+  slug             String?
+  author           Author   @relation(fields: [authorId], references: [id])
+  tags             Tag[]    @relation("BlogTags")
 }
 
 model Author {
@@ -65,15 +51,15 @@ model Feature {
 }
 
 model Project {
-  id           Int      @id @default(autoincrement())
-  title        String
-  description  String
-  siteName     String
-  url          String   @unique
-  technologies String[]
-  imageLight   String?
-  imageDark    String?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @default(now()) @updatedAt
-  priority_show    Int      @default(10000000)
+  id            Int      @id @default(autoincrement())
+  title         String
+  description   String
+  siteName      String
+  url           String   @unique
+  technologies  String[]
+  imageLight    String?
+  imageDark     String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
+  priority_show Int      @default(10000000)
 }
