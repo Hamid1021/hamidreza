@@ -4,7 +4,7 @@ import moment from "moment-jalaali";
 import TagButton from "@/components/Blog/TagButton";
 import { getBlogByIdAndSlug } from "./actions/actions";
 import { Blog } from "@/types/blog";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ slug: string, id: string }>

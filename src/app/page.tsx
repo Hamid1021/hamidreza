@@ -13,7 +13,7 @@ import { Metadata } from "next";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Link from "next/link";
 import { getAllProjects } from "./projects/actions";
-import { Project } from "@prisma/client";
+import type { Project } from "@prisma/client";
 
 export const metadata: Metadata = {
   title: "حمیدرضا رضایی",
